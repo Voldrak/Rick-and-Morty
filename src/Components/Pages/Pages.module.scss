@@ -2,8 +2,9 @@
 
 .ListChar{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    width: 100vw;
-    gap: 1vw;
+    max-width: 100vw;
+    gap: 3vw;
     justify-content: center;
 }
