@@ -1,6 +1,6 @@
-const BASE_URL = "https://rickandmortyapi.com/api";
+// const BASE_URL = "https://rickandmortyapi.com/api";
 
-const http = (resource) =>
-  fetch(BASE_URL + resource).then((response) => response.json());
+// const http = (resource) =>
+//   fetch(BASE_URL + resource).then((response) => response.json());
 
-export { http };
+// export { http };
