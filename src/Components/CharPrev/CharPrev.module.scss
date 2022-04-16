@@ -1,0 +1,11 @@
+
+.charList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
+
+    .charPrevLi{
+        list-style: none;
+    }
+}
