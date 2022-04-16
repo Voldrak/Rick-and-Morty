@@ -1,18 +1,38 @@
-import styles from "./CharPrev.module.scss";
+import style from "./CharPrev.module.scss";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const CharPrev = (props) => {
 
-  const data = props.data || {
-    id: "",
-    name: "Characters",
-    image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",  
-  };
+const CharPrev = ({handleCharDetails}) => {
+
+  // const data = props.data || {
+  //   id: "1",
+  //   name: "Characters",
+  //   image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",  
+  // };
+
+  const [charactersPreview, setCharactersPreview] = useState([]);
+
+  useEffect(() => {
+      axios.get(
+          "https://rickandmortyapi.com/api/character"
+      )
+      .then(res => {
+          setCharactersPreview(res.data.results); 
+      })
+  }, []);
+
+  
 
   return (
-    <div key={data.id} className={styles.char} >
-      <img src={data.image} alt={data.name} />
-      <p>{data.name}</p>
-    </div>
+    <ul className={style.charList}>
+    {charactersPreview.map(char =>
+    <li key={char.id} onClick={() => handleCharDetails(char.id)} className={style.charPrevLi} >
+      <img src={char.image} alt={char.name} />
+      <p>{char.name}</p>
+    </li>
+    )}
+    </ul>
   );
 };
 

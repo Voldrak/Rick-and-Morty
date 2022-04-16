@@ -1,10 +1,39 @@
 .modaleDetails{
-    width: 50vw;
+    width: 60vw;
     height: auto;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: brown;
     transition: all 0.35s;
+
+    .modalWrapper{
+        display: flex;
+        flex-direction: row;
+
+        .modalImgChar{
+            width: auto;
+        }
+
+        .modalDescription{
+            text-align: start;
+            margin: 3vh 0 0 4vw;
+        }
+    }
+
+    @media screen and (max-width: 1250px){
+        
+            
+        .modalWrapper{
+            flex-direction: column;
+
+            .modalBtnClose{
+                margin-bottom: 2vh;
+            }
+        }
+    }
+
+
 }
+
