@@ -23,11 +23,15 @@ const CharPrev = ({handleCharDetails}) => {
   }, [currentPage]);
 
   const goToNextPage = () => {
+    if (currentPage !== 42){
     setCurrentPage((page) => page + 1);
+    }
   }
 
     const goToPreviousPage = () => {
+      if (currentPage !== 1) {
         setCurrentPage((page) => page - 1);
+        }
     }
 
     const changePage = (e) => {
@@ -35,7 +39,7 @@ const CharPrev = ({handleCharDetails}) => {
         setCurrentPage(pageNumber);
     }
 
-  return (
+    return (
     <>
     <ul className={style.charList}>
     {charactersPreview.map((char) =>
