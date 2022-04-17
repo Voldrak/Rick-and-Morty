@@ -20,7 +20,7 @@ const ModaleChar = ({closeCharDetails, customedID}) => {
         <div className={style.modaleDetails}>
          
             <div key={charactersPrev.id} className={style.modalWrapper}>
-                <img src={charactersPrev.image} alt={charactersPrev.name} className={style.modalImgChar}/>
+                <img src={charactersPrev.image} alt={charactersPrev.name} className={style.modalImgChar} loading="lazy"/>
                 <div className={style.modalDescription}>
                     <p>Name: {charactersPrev.name}</p>
                     <p>Status: {charactersPrev.status}</p> 
