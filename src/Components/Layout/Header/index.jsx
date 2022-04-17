@@ -1,10 +1,12 @@
 import style from "./Header.module.scss"
+import SearchBar from "./searchBar";
+
 
 const Header = () => {
     return(
 
         <div className={style.Header}>
-            <label htmlFor="search">Search <input type="text" placeholder="Search here" /> </label>
+            <SearchBar />
         </div>
 
     )

@@ -1,0 +1,31 @@
+.Pagination{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    align-items: center;
+
+    .pagPrevNext{
+        cursor: pointer;
+    }
+
+    .Pagination_Num{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1vw;
+        justify-content: center;
+
+        .pagNum{
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border: transparent;
+
+    //         &:target{
+    //         color: rgb(17, 0, 255);
+    //         border-radius: 50%;
+    //         background-color: rgba(255, 10, 10, 0.425)
+    // }
+        }
+    }
+}

@@ -1,38 +1,54 @@
 import style from "./CharPrev.module.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { Context } from "./../Pages/Home";
 import axios from "axios";
+import Pagination from "./../Pagination";
 
 
 const CharPrev = ({handleCharDetails}) => {
 
-  // const data = props.data || {
-  //   id: "1",
-  //   name: "Characters",
-  //   image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",  
-  // };
-
   const [charactersPreview, setCharactersPreview] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  // const [colorNumPage, setColorNumPage] = useState("#fff")
+
+  const { value } = useContext(Context);
 
   useEffect(() => {
       axios.get(
-          "https://rickandmortyapi.com/api/character"
+        `https://rickandmortyapi.com/api/character/?page=` + currentPage
       )
       .then(res => {
           setCharactersPreview(res.data.results); 
       })
-  }, []);
+  }, [currentPage]);
 
-  
+  const goToNextPage = () => {
+    setCurrentPage((page) => page + 1);
+  }
+
+    const goToPreviousPage = () => {
+        setCurrentPage((page) => page - 1);
+    }
+
+    const changePage = (e) => {
+        const pageNumber = Number(e.target.textContent)
+        setCurrentPage(pageNumber);
+    }
 
   return (
+    <>
     <ul className={style.charList}>
-    {charactersPreview.map(char =>
+    {charactersPreview.map((char) =>
+    char.name.toLowerCase().includes(value.toLowerCase()) && (
     <li key={char.id} onClick={() => handleCharDetails(char.id)} className={style.charPrevLi} >
-      <img src={char.image} alt={char.name} />
+      <img src={char.image} alt={char.name} loading="lazy" />
       <p>{char.name}</p>
     </li>
+    )
     )}
     </ul>
+    <Pagination goToPreviousPage={goToPreviousPage} changePage={changePage} goToNextPage={goToNextPage}/>
+    </>
   );
 };
 
