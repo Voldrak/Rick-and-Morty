@@ -1,8 +1,30 @@
 .Header{
     width: 100vw;
-    height: 50px;
+    height: 200px;
     background: brown;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     line-height: 50px;
+
+    a{
+        .title{
+            color: black
+        }
+        text-decoration: none;
+
+    }
+
+    .filter{
+        text-align: left;
+        margin-left: 1vw;
+        font-size: 20px;
+        
+        a{
+            border: 1px solid black;
+            padding: 0.5vw;
+            color: black;
+            text-decoration: none;
+        }
+    }
 }

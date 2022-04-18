@@ -27,15 +27,15 @@ const Home = () => {
     return(
         <div className={style.wrapper_Home}>
             <Context.Provider value={{ value, setValue }}>
-        <Layout>
-                <div>
-                    <h1>Rick and Morty</h1>
-                    <aside className={style.ListChar}>
-                        <CharPrev handleCharDetails={handleCharDetails} />
-                    </aside>
-                    {charDetails && <ModaleChar customedID={custId} closeCharDetails={closeCharDetails} />}
-                </div>
-        </Layout>
+                <Layout>
+                        <div>
+                            <h2>Characters List</h2>
+                            <aside className={style.ListChar}>
+                                <CharPrev handleCharDetails={handleCharDetails} />
+                            </aside>
+                            {charDetails && <ModaleChar customedID={custId} closeCharDetails={closeCharDetails} />}
+                        </div>
+                </Layout>
             </Context.Provider>
         </div>
     )

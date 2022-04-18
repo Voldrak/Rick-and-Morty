@@ -8,3 +8,12 @@
 //     gap: 3vw;
 //     justify-content: center;
 // }
+
+///// Favourite /////
+
+.container_Favorites{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
