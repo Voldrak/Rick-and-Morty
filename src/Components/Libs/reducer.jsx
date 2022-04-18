@@ -3,13 +3,6 @@ export const initialState = {
   };
 
   const reducer = (state, action) => {
-    let index;
-
-    if (action.obj) {
-      index = state.favorite.findIndex(
-        (obj) => obj.id === action.obj.id
-      );
-    }
 
       switch (action.type) {
           case "favorite_char":
