@@ -6,7 +6,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: brown;
-    transition: all 0.35s;
+    border: 1px solid black;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.6);
 
     .modalWrapper{
         display: flex;
@@ -19,6 +21,16 @@
         .modalDescription{
             text-align: start;
             margin: 3vh 0 0 4vw;
+
+            .modalBtnClose{
+                background: transparent;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                border: none;
+                font-size: 22px;
+                cursor: pointer;
+            }
         }
     }
 
@@ -27,10 +39,7 @@
             
         .modalWrapper{
             flex-direction: column;
-
-            .modalBtnClose{
-                margin-bottom: 2vh;
-            }
+ 
         }
     }
 

@@ -28,12 +28,12 @@ const Home = () => {
         <div className={style.wrapper_Home}>
             <Context.Provider value={{ value, setValue }}>
                 <Layout>
-                        <div>
+                        <div className={style.container_Home}>
                             <h2>Characters List</h2>
                             <aside className={style.ListChar}>
                                 <CharPrev handleCharDetails={handleCharDetails} />
                             </aside>
-                            {charDetails && <ModaleChar customedID={custId} closeCharDetails={closeCharDetails} />}
+                                {charDetails && <ModaleChar customedID={custId} closeCharDetails={closeCharDetails} />}
                         </div>
                 </Layout>
             </Context.Provider>

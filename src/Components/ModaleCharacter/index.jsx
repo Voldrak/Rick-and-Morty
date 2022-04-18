@@ -27,7 +27,7 @@ const ModaleChar = ({closeCharDetails, customedID}) => {
                     <p>Species: {charactersPrev.species}</p>
                     <p>Gender: {charactersPrev.gender}</p>
                     <p>Created: {charactersPrev.created}</p>
-                    <button onClick={closeCharDetails} className={style.modalBtnClose}>Close</button>
+                    <button onClick={closeCharDetails} className={style.modalBtnClose}>✖️</button>
                 </div> 
             </div>
             

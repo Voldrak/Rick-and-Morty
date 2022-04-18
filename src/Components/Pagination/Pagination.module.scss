@@ -1,4 +1,5 @@
 .Pagination{
+    width: 100vw;
     display: flex;
     justify-content: center;
     gap: 1vw;
@@ -21,12 +22,6 @@
             height: 20px;
             background-color: transparent;
             border: transparent;
-
-    //         &:target{
-    //         color: rgb(17, 0, 255);
-    //         border-radius: 50%;
-    //         background-color: rgba(255, 10, 10, 0.425)
-    // }
         }
     }
 }
