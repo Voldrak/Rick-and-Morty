@@ -7,12 +7,29 @@
     justify-content: center;
     line-height: 50px;
 
-    a{
-        .title{
-            color: black
-        }
-        text-decoration: none;
+    .container_Title{
+        width: 20vw;
+        min-width: 270px;
+        margin: 0 auto;
+        
+        a{
+            .title{
+                color: black
+            }
+            text-decoration: none;
 
+        }
+    }
+    .searchDiv{
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+        
+        .searchInput{
+            width: 70vw;
+            height: 30px;
+            font-size: 22px;
+        }
     }
 
     .filter{

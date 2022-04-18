@@ -7,7 +7,7 @@ const Header = () => {
     return(
 
         <div className={style.Header}>
-            <div>
+            <div className={style.container_Title}>
             <Link to={"/"}><h1 className={style.title}>Rick and Morty</h1></Link>
             </div>
             

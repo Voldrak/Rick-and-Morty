@@ -44,6 +44,7 @@ const CharPrev = ({handleCharDetails}) => {
     const checkInclusi = (val) =>
     favorite.find((char) => char.name.includes(val));
 
+    // AGGIUNGERE AI PREFERITI //
     const addToFavourite = (items) => {
       dispatch({
         type: "favorite_char",
@@ -54,16 +55,16 @@ const CharPrev = ({handleCharDetails}) => {
         },
       });
     };
-
     
     return (
-    <>
+    <div className={style.wrapper_CharPrev}>
+      <p>Page {currentPage}</p>
     <ul className={style.charList}>
     {charactersPreview.map((char) =>
-    char.name.toLowerCase().includes(value.toLowerCase()) && (
-    <div key={char.id}>
-      <li  onClick={() => handleCharDetails(char.id)} className={style.charPrevLi} >
-        <img src={char.image} alt={char.name} loading="lazy" />
+      char.name.toLowerCase().includes(value.toLowerCase()) && (
+    <div key={char.id} className={style.wrapper_List}>
+      <li onClick={() => handleCharDetails(char.id)} className={style.charPrevLi} >
+        <img src={char.image} alt={char.name} className={style.imageCharacter} loading="lazy" />
         <p>{char.name}</p> 
       </li>
       <button
@@ -72,15 +73,15 @@ const CharPrev = ({handleCharDetails}) => {
         disabled={checkInclusi(char.name)}
       >
         {!checkInclusi(char.name)
-          ? "Add to Favourite"
-          : "Already in the Favorites"}
+          ? "🌟"
+          : "⭐"}
       </button>
     </div>
     )
     )}
     </ul>
     <Pagination goToPreviousPage={goToPreviousPage} changePage={changePage} goToNextPage={goToNextPage}/>
-    </>
+    </div>
   );
 };
 

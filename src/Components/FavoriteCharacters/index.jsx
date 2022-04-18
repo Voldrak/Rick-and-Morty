@@ -22,7 +22,7 @@ const FavoriteCharacters = ({id, name, image}) => {
         <div key={id} className={style.wrapper_Fav}>
             <img src={image} alt={name} />
             <p>{name}</p>
-            <button onClick={deleteFromFavorites}>Delete from Favorites</button>
+            <button onClick={deleteFromFavorites} className={style.btnRemove}>🗑️</button>
         </div>
 
     )
