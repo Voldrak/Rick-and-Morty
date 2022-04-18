@@ -8,13 +8,13 @@ const Pagination = ({goToNextPage, goToPreviousPage, changePage}) => {
 
     return(
         <div className={style.Pagination}>
-            <a onClick={goToPreviousPage} className={style.pagPrevNext}>Prev</a>
+            <button onClick={goToPreviousPage} className={style.pagPrevNext}>Prev</button>
             <div className={style.Pagination_Num}>
             {nums.map((index, i) =>
                 <button key={i + 1} className={style.pagNum} onClick={changePage}>{index}</button>
             )}
             </div>
-            <a onClick={goToNextPage} className={style.pagPrevNext}>Next</a>
+            <button onClick={goToNextPage} className={style.pagPrevNext}>Next</button>
         </div>
     )
 }

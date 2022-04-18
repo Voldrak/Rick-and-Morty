@@ -13,7 +13,7 @@ const Header = () => {
             
             <SearchBar />
             <div className={style.filter}>
-            <Link to={"/favourite"}>Favourites</Link>
+            <Link to={"/favourite"}>Favourite</Link>
             </div>
         </div>
 
