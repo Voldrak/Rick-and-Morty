@@ -55,6 +55,7 @@ const CharPrev = ({handleCharDetails}) => {
       });
     };
 
+    
     return (
     <>
     <ul className={style.charList}>

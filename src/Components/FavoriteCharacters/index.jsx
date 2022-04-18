@@ -2,7 +2,7 @@ import { useStateValue } from "./../Libs/StateProvider";
 import style from "./FavoriteCharacters.module.scss"
 
 const FavoriteCharacters = ({id, name, image}) => {
-
+    // eslint-disable-next-line
     const [{ favorite }, dispatch] = useStateValue();
 
     // ELIMINARE DAI PREFERITI //
