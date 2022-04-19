@@ -1,8 +1,8 @@
 {
-  "name": "ricky_and_morty",
+  "name": "rick_and_morty",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://voldrak.github.io/Rick-and-Morty/",
+  "homepage": "https://voldrak.github.io/rick-and-morty/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
