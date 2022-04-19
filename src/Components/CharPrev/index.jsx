@@ -73,8 +73,8 @@ const CharPrev = ({handleCharDetails}) => {
         disabled={checkInclusi(char.name)}
       >
         {!checkInclusi(char.name)
-          ? "🌟"
-          : "⭐"}
+          ? "⭐"
+          : "🌟"}
       </button>
     </div>
     )

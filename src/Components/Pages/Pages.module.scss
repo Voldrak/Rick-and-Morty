@@ -1,16 +1,46 @@
 ///// HOME /////
-
+.wrapper_Home{
+    max-width: 100vw;
+    overflow-x: hidden;
     .container_Home{
-        width: 100vw;
+        max-width: 100vw;
     }
-
+}
 
 
 ///// Favourite /////
 
-.container_Favorites{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2vw;
+.wrapper_FavoritesPage{
+    min-height: 83.3vh;
+    overflow-x: hidden;
+
+    .EmptyList{
+        position: absolute;
+        width: 70vw;
+        height: 50vh;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        background: linear-gradient(
+            0deg,
+            rgb(239, 128, 128) 0%,
+            rgba(176, 172, 172, 0.321) 100%,
+        );
+        color: rgba(0, 0, 0, 0.73);
+        
+    }
+
+    .container_Favorites{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2vw;
+
+    }
+    @media screen and (max-width: 1250px){
+        .container_Favorites{
+            gap: 5vh;
+        }
+    }
 }

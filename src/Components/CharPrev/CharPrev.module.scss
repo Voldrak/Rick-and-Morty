@@ -5,12 +5,14 @@
 .charList{
     display: flex;
     flex-wrap: wrap;
+    width: 95vw;
     gap: 2vw;
     justify-content: center;
-    margin: 5vh auto;
+    margin: 5vh 0;
 
     .wrapper_List{
         display: flex;
+        width: 300px;
         flex-direction: column;
         border: 1px solid black;
         transition: all 0.35s;
@@ -21,11 +23,14 @@
     }
     .charPrevLi{
         list-style: none;
+        width: 300px;
 
         .imageCharacter{
             width: 300px;
         }
     }
+   
+
     .btnAdd{
         position: relative;
         margin: 0 0 0 auto;
@@ -38,6 +43,12 @@
         
     }
 
+    }
+}
+
+@media screen and (max-width: 1250px){
+    .charList{
+        gap: 5vh;
     }
 }
 }

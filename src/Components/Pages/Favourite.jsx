@@ -9,9 +9,14 @@ const Favorite = () => {
 
     return(
         <Layout>
-            <div>
+            <div className={style.wrapper_FavoritesPage}>
                 <h2>Favorite List</h2> 
-                <div className={style.container_Favorites}>
+                {favorite?.length === 0 ? (
+                    <div className={style.EmptyList}>
+                        <h2>Favorite List Empty</h2>
+                    </div>
+                ) : (
+                    <div className={style.container_Favorites}>
                 {favorite?.map((item) => (
                     <FavoriteCharacters
                         key={item.id} 
@@ -21,6 +26,7 @@ const Favorite = () => {
                     />
                 ))}
                 </div>
+                )}
             </div>
         </Layout>
     )

@@ -8,20 +8,33 @@
     .pagPrevNext{
         cursor: pointer;
         text-decoration: none;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.214);
+        transition: all 0.25s;
+
+        &:hover{
+            color: red;
+            border: 2px solid red;
+            background-color: transparent;
+        }
     }
 
     .Pagination_Num{
+        width: 70vw;
         display: flex;
         flex-wrap: wrap;
         gap: 1vw;
         justify-content: center;
-
+        
         .pagNum{
             cursor: pointer;
             width: 20px;
             height: 20px;
             background-color: transparent;
             border: transparent;
+            &:hover{
+                color: red;
+            }
         }
     }
 }
