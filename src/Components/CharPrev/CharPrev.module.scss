@@ -5,7 +5,7 @@
 .charList{
     display: flex;
     flex-wrap: wrap;
-    width: 95vw;
+    width: 100vw;
     gap: 2vw;
     justify-content: center;
     margin: 5vh 0;
@@ -22,11 +22,11 @@
             transform: scale(1.1)
     }
     .charPrevLi{
-        list-style: none;
         width: 300px;
 
         .imageCharacter{
             width: 300px;
+            height: 300px;
         }
     }
    
@@ -40,9 +40,23 @@
         width: 50px;
         height: 50px;
         bottom: 5px;
-        
+        cursor: pointer;
     }
 
+    }
+    @media screen and (max-width: 310px){
+        .wrapper_List{
+            width: 80vw;
+            
+            .charPrevLi{
+                list-style: none;
+                width: 80vw;
+        
+                .imageCharacter{
+                    width: 80vw;
+                }
+            }
+        }
     }
 }
 
@@ -51,4 +65,5 @@
         gap: 5vh;
     }
 }
+
 }

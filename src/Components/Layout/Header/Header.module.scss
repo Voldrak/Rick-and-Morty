@@ -1,7 +1,7 @@
 .Header{
     width: 100vw;
     height: 200px;
-    background: brown;
+    background: rgb(165, 42, 42);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,6 +36,7 @@
         text-align: left;
         margin-left: 1vw;
         font-size: 20px;
+        margin-bottom: 1vh;
         
         a{
             border: 1px solid black;
@@ -43,5 +44,12 @@
             color: black;
             text-decoration: none;
         }
+    }
+}
+
+@media screen and (max-width: 285px){
+    .Header{
+        height: 250px;
+        
     }
 }

@@ -18,12 +18,13 @@ const Favorite = () => {
                 ) : (
                     <div className={style.container_Favorites}>
                 {favorite?.map((item) => (
+                    <div key={item.id} className={style.wrapper_Favorites}>
                     <FavoriteCharacters
-                        key={item.id} 
                         id={item.id} 
                         image={item.image}
                         name={item.name}
                     />
+                    </div>
                 ))}
                 </div>
                 )}

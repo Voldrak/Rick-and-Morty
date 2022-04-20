@@ -41,6 +41,7 @@ const CharPrev = ({handleCharDetails}) => {
         setCurrentPage(pageNumber);
     }
 
+    // CHECK ELEMENTO GIA' TRA I PREFERITI //
     const checkInclusi = (val) =>
     favorite.find((char) => char.name.includes(val));
 
@@ -59,14 +60,14 @@ const CharPrev = ({handleCharDetails}) => {
     return (
     <div className={style.wrapper_CharPrev}>
       <p>Page {currentPage}</p>
-    <ul className={style.charList}>
+    <aside className={style.charList}>
     {charactersPreview.map((char) =>
       char.name.toLowerCase().includes(value.toLowerCase()) && (
     <div key={char.id} className={style.wrapper_List}>
-      <li onClick={() => handleCharDetails(char.id)} className={style.charPrevLi} >
-        <img src={char.image} alt={char.name} className={style.imageCharacter} loading="lazy" />
+      <div onClick={() => handleCharDetails(char.id)} className={style.charPrevLi} >
+        <img src={char.image} alt={char.name} className={style.imageCharacter} />
         <p>{char.name}</p> 
-      </li>
+      </div>
       <button
         onClick={() => addToFavourite(char)}
         className={style.btnAdd}
@@ -79,7 +80,7 @@ const CharPrev = ({handleCharDetails}) => {
     </div>
     )
     )}
-    </ul>
+    </aside>
     <Pagination goToPreviousPage={goToPreviousPage} changePage={changePage} goToNextPage={goToNextPage}/>
     </div>
   );
